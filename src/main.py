@@ -1,4 +1,5 @@
 from pathlib import Path
+import random
 import pygame
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,10 +25,11 @@ def main():
                 )
         keys = set()
         buttons = set()
-        elapsed = 0.0
+        blink_until = 0
+        next_blink = pygame.time.get_ticks() + random.randint(3000, 6000)
         running = True
         while running:
-            elapsed += clock.tick(60) / 1000
+            clock.tick(60)
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
@@ -45,7 +47,16 @@ def main():
                 elif event.type == pygame.WINDOWFOCUSLOST:
                     keys.clear()
                     buttons.clear()
-            state = "both" if keys and buttons else "keyboard" if keys else "mouse" if buttons else "blink" if elapsed % 4.0 > 3.8 else "idle"
+            now = pygame.time.get_ticks()
+            if keys or buttons:
+                blink_until = 0
+                next_blink = now + random.randint(3000, 6000)
+                state = "both" if keys and buttons else "keyboard" if keys else "mouse"
+            else:
+                if now >= next_blink:
+                    blink_until = now + 350
+                    next_blink = blink_until + random.randint(3000, 6000)
+                state = "blink" if now < blink_until else "idle"
             screen.fill((25, 20, 36))
             sprite = sprites.get(state, sprites.get("idle"))
             if sprite is not None:
