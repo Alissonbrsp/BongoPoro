@@ -1,0 +1,5 @@
+# No Kali Linux, instalar pygame pelo APT antes de criar o venv.
+pygame
+pynput
+numpy
+sounddevice
