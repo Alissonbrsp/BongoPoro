@@ -8,7 +8,7 @@ O repositório mantém o nome original BongoPoro.
 
 ## Tecnologias previstas
 
-- Python e Pygame — renderização e animações.
+- Python e Pygame CE — renderização e animações.
 - Pynput — eventos de teclado e mouse.
 - NumPy e SoundDevice — detecção de voz.
 - OBS Studio — integração com transmissões.
@@ -16,7 +16,7 @@ O repositório mantém o nome original BongoPoro.
 ## Roadmap
 
 - [x] Identidade visual aprovada.
-- [ ] Bloco 01 — preparação e validação do ambiente.
+- [x] Bloco 01 — preparação do ambiente e teste gráfico (Kali Linux).
 - [ ] Bloco 02 — sprites e animações básicas.
 - [ ] Bloco 03 — teclado e mouse.
 - [ ] Bloco 04 — voz e expressões.
@@ -28,7 +28,13 @@ O repositório mantém o nome original BongoPoro.
 
 Consulte [Bloco 01 — Kali Linux](docs/bloco-01.md).
 
-Status: planejamento e preparação. Ainda não há versão executável.
+Consulte também [Bloco 02 — protótipo](docs/bloco-02.md).
+
+Status: motor de animação inicial publicado; validação e sprites oficiais pendentes.
+
+```bash
+python src/main.py
+```
 
 As fotografias pessoais do Buster não fazem parte do repositório público.
 
