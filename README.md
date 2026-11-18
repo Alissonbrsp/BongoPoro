@@ -2,7 +2,7 @@
 
 *My Forever Player 2.*
 
-Mascote virtual interativo inspirado no Bongo Cat, desenvolvido em homenagem ao Buster. Projeto para Twitch e OBS Studio, escrito em Python.
+Mascote virtual interativo inspirado no Bongo Cat, desenvolvido em homenagem ao meu companheiro falecido Buster. Projeto para Twitch e OBS Studio, escrito em Python.
 
 O repositório mantém o nome original BongoPoro.
 
